@@ -1,0 +1,158 @@
+{
+  "navbar": {
+    "Home": "Home",
+    "Products": "Products",
+    "Categories": "Categories",
+    "Brands": "Brands",
+    "AllOrders": "All Orders",
+    "Profile": "Profile",
+    "SignOut": "Sign Out",
+    "Login": "Login",
+    "Register": "Register",
+    "lang": "lang"
+  },
+  "footer": {
+    "paragraph": "We will send you a link, open it on your phone to download the app",
+    "paymentPartners": "Payment Partners",
+    "getDeliveries": "Get deliveries with FreshCart",
+    "copyRight": "All Rights Reserved.",
+    "author": "Hussein Ashraf",
+    "social": {
+      "facebook": "Facebook page",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter page",
+      "github": "GitHub account"
+    },
+    "emailPlaceholder": "Enter your email address",
+    "shareAppLink": "Share App Link"
+  },
+  "orders": {
+    "totalOrders": "Total Orders",
+    "orderId": "Order ID",
+    "createdAt": "Created At",
+    "totalPrice": "Total Price",
+    "isPaid": "Is Paid",
+    "isDelivered": "Is Delivered",
+    "paymentMethod": "Payment Method",
+    "clickToViewDetails": "Click to view product details",
+    "viewDetails": "View Details",
+    "orderDetails": "Order Details",
+    "customerInfo": "Customer Info",
+    "name": "Name",
+    "email": "Email",
+    "address": "Address",
+    "city": "City",
+    "phone": "Phone",
+    "count": "Count",
+    "price": "Price",
+    "yes": "Yes",
+    "no": "No",
+    "in": "in"
+  },
+  "TitleCategory": "Shop Popular Category",
+  "cart": {
+    "shopCart": "Shop Cart",
+    "totalPrice": "Total Cart Price:",
+    "price": "Price:",
+    "remove": "Remove",
+    "clearCart": "Clear Cart",
+    "removeAll": "Remove All",
+    "buyNow": "Buy Now",
+    "empty": "Your cart is empty",
+    "startShopping": "You have no items in your cart.",
+    "shopNow": "Start Shopping"
+  },
+  "WISHLIST": {
+    "TITLE": "WishList",
+    "COUNT": "Count",
+    "PRICE": "Price",
+    "REMOVE": "Remove",
+    "ADD_TO_CART": "Add To Cart",
+    "EMPTY": "Your wishlist is empty",
+    "START_ADDING": "Start adding items you love!",
+    "BROWSE_PRODUCTS": "Browse Products"
+  },
+  "loading": "Loading............",
+  "USER_INFO": {
+    "TITLE": "Your Info",
+    "NAME": "Name",
+    "ROLE": "Role",
+    "EMAIL": "Email",
+    "PHONE": "Phone",
+    "UPDATE_DATA": "Update Your Data",
+    "UPDATE_PASSWORD": "Update Your Password"
+  },
+  "UPDATE_DATA": {
+    "TITLE": "Update Data",
+    "NAME_LABEL": "Your Name",
+    "NAME_PLACEHOLDER": "Your Name",
+    "EMAIL_LABEL": "Your Email",
+    "EMAIL_PLACEHOLDER": "name@example.com",
+    "PHONE_LABEL": "Your Phone",
+    "PHONE_PLACEHOLDER": "1234567890",
+    "SUBMIT": "Update Data",
+    "ERRORS": {
+      "REQUIRED": "Please fill out this field.",
+      "NAME_MIN": "Name should be at least 3 characters.",
+      "NAME_MAX": "Name should not exceed 20 characters.",
+      "INVALID_EMAIL": "Invalid email address.",
+      "INVALID_PHONE": "Invalid phone number."
+    }
+  },
+  "UPDATE_PASSWORD": {
+    "TITLE": "Update Password",
+    "CURRENT_PASSWORD_LABEL": "Current Password",
+    "CURRENT_PASSWORD_PLACEHOLDER": "Current Password",
+    "NEW_PASSWORD_LABEL": "New Password",
+    "NEW_PASSWORD_PLACEHOLDER": "New Password",
+    "CONFIRM_PASSWORD_LABEL": "Confirm Password",
+    "CONFIRM_PASSWORD_PLACEHOLDER": "Confirm Password",
+    "SUBMIT": "Update Password",
+    "ERRORS": {
+      "REQUIRED": "Please fill out this field.",
+      "INVALID_PASSWORD": "Invalid password.",
+      "PASSWORDS_NOT_MATCH": "Passwords do not match."
+    }
+  },
+  "LOGIN": {
+    "TITLE": "Login",
+    "EMAIL_LABEL": "Email address",
+    "PASSWORD_LABEL": "Password",
+    "SIGN_IN": "Sign In",
+    "FORGET_PASSWORD": "Forget Password",
+    "SUCCESS_MESSAGE": "Successfully logged in.",
+    "ERRORS": {
+      "REQUIRED": "Please fill out this field.",
+      "INVALID_EMAIL": "Invalid email address.",
+      "INVALID_PASSWORD": "Invalid password."
+    }
+  },
+  "REGISTER_NOW": "Register Now",
+  "NAME": "Name",
+  "REQUIRED_FIELD": "Please fill out this field.",
+  "NAME_MIN_LENGTH": "Name should be more than or equal to 3 characters.",
+  "NAME_MAX_LENGTH": "Name should be less than or equal to 20 characters.",
+  "EMAIL_ADDRESS": "Email address",
+  "INVALID_EMAIL": "Invalid email address.",
+  "PHONE_NUMBER": "Phone number (123-456-7890)",
+  "INVALID_PHONE": "Invalid phone number.",
+  "PASSWORD": "Password",
+  "INVALID_PASSWORD": "Invalid password.",
+  "CONFIRM_PASSWORD": "Confirm password",
+  "PASSWORDS_MISMATCH": "Passwords do not match.",
+  "REGISTER": "Register",
+  "FORGET_PASSWORD": "Forget Password",
+  "YOUR_EMAIL": "Your email",
+  
+  "RESET_CODE_SENT": "Reset code sent to your email",
+  "ENTER_CODE": "Enter Code",
+  "INVALID_CODE": "Invalid Code.",
+  "VERIFY_CODE": "Verify Code",
+  "RESET_PASSWORD": "Reset Password",
+  "NEW_PASSWORD": "New password",
+  
+  "PLEASE_FILL_OUT_FIELD": "Please fill out this field.",
+  "SUCCESS_RESET_PASSWORD": "Change password Successfully",
+  "RETRY": "Retry",
+  "SUBMIT": "Submit"
+}

@@ -1,0 +1,78 @@
+<section class="my-5">
+  <div
+    class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-white dark:bg-gray-800 shadow-md rounded-lg"
+  >
+    <div class="p-6">
+      <h1
+        class="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-6 flex items-center"
+      >
+        <i class="fa-solid fa-circle-user text-blue-500 text-4xl me-3"></i>
+        {{ "USER_INFO.TITLE" | translate }}
+      </h1>
+
+      <div class="flex flex-col gap-6">
+        <!-- Name -->
+        <div class="flex items-center">
+          <h2 class="text-gray-500 dark:text-gray-400 text-sm me-3">
+            {{ "USER_INFO.NAME" | translate }}:
+          </h2>
+          <span
+            class="text-gray-800 dark:text-gray-200 font-semibold text-lg"
+            >{{ dataUser.name }}</span
+          >
+        </div>
+
+        <!-- Role -->
+        <div class="flex items-center">
+          <h2 class="text-gray-500 dark:text-gray-400 text-sm me-3">
+            {{ "USER_INFO.ROLE" | translate }}:
+          </h2>
+          <span
+            class="text-gray-800 dark:text-gray-200 font-semibold text-lg"
+            >{{ dataUser.role }}</span
+          >
+        </div>
+
+        <!-- Email -->
+        <div class="flex items-center">
+          <h2 class="text-gray-500 dark:text-gray-400 text-sm me-3">
+            {{ "USER_INFO.EMAIL" | translate }}:
+          </h2>
+          <span
+            class="text-gray-800 dark:text-gray-200 font-semibold text-lg"
+            >{{ dataUser.email }}</span
+          >
+        </div>
+
+        <!-- Phone -->
+        <div class="flex items-center">
+          <h2 class="text-gray-500 dark:text-gray-400 text-sm me-3">
+            {{ "USER_INFO.PHONE" | translate }}:
+          </h2>
+          <span
+            class="text-gray-800 dark:text-gray-200 font-semibold text-lg"
+            >{{ dataUser.phone }}</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-6 mx-auto px-4 sm:px-6 lg:px-8">
+      <a
+        routerLink="/updateData"
+        class="flex items-center text-blue-500 hover:text-blue-600"
+      >
+        <i class="fa-solid fa-pen-to-square mt-1 me-2"></i>
+        {{ "USER_INFO.UPDATE_DATA" | translate }}
+      </a>
+
+      <a
+        routerLink="/updatePassword"
+        class="flex items-center text-blue-500 hover:text-blue-600"
+      >
+        <i class="fa-solid fa-wrench mt-1 me-3"></i>
+        {{ "USER_INFO.UPDATE_PASSWORD" | translate }}
+      </a>
+    </div>
+  </div>
+</section>

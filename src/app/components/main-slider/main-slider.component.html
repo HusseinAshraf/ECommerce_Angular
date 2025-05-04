@@ -1,0 +1,42 @@
+<section>
+  <div class="grid grid-cols-1 md:grid-cols-12 my-4 mx-4 md:mx-10 pt-5">
+    <div class="col-span-1 md:col-span-10">
+      <owl-carousel-o [options]="customOptionsMain">
+        <ng-template carouselSlide>
+          <img
+            src="./assets/images/slider-2.jpeg"
+            class="w-full h-[200px] md:h-[300px]"
+            alt="imgSlider"
+          />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img
+            src="./assets/images/grocery-banner.png"
+            class="w-full h-[200px] md:h-[300px]"
+            alt="mainSlider"
+          />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img
+            src="./assets/images/grocery-banner-2.jpeg"
+            class="w-full h-[200px] md:h-[300px]"
+            alt="mainSlider"
+          />
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+
+    <div class="col-span-1 md:col-span-2 h-auto">
+      <img
+        src="./assets/images/slider-image-2.jpeg"
+        class="w-full h-[100px] md:h-[150px] hidden md:block"
+        alt="imgSlider"
+      />
+      <img
+        src="./assets/images/slider-image-3.jpeg"
+        class="w-full h-[100px] md:h-[150px] hidden md:block"
+        alt="imgSlider"
+      />
+    </div>
+  </div>
+</section>

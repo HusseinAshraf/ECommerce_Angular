@@ -1,0 +1,17 @@
+<section class="mx-9">
+  <h1 class="text-xl font-sans py-1">{{ "TitleCategory" | translate  }}</h1>
+  <owl-carousel-o [options]="customOptionsCategory">
+    @for (category of categoriesList; track category._id) {
+    <ng-template carouselSlide>
+      <div>
+        <img
+          [src]="category.image"
+          class="h-56 w-full"
+          alt="{{ category.name }}"
+        />
+        <h3 class="text-gray-400 pt-1">{{ category.name }}</h3>
+      </div>
+    </ng-template>
+    }
+  </owl-carousel-o>
+</section>

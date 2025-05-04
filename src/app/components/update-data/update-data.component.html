@@ -1,0 +1,106 @@
+<section class="md:max-w-3xl max-w-md mx-auto p-5 my-5 border bg-white dark:bg-gray-800 rounded-lg shadow-lg dark:shadow-none">
+  <div class="space-y-5">
+    <h2 class="text-2xl font-semibold text-gray-800 dark:text-white text-center">
+      {{ 'UPDATE_DATA.TITLE' | translate }}
+    </h2>
+
+    <form [formGroup]="updateDataForm" (ngSubmit)="updateDataSubmit()">
+      <!-- Name -->
+      <div class="mb-5">
+        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          {{ 'UPDATE_DATA.NAME_LABEL' | translate }}
+        </label>
+        <input
+          type="text"
+          id="name"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          [placeholder]="'UPDATE_DATA.NAME_PLACEHOLDER' | translate"
+          required
+          formControlName="name"
+        />
+        <div class="pt-2">
+          @if (updateDataForm.get('name')?.errors && (updateDataForm.get('name')?.touched || updateDataForm.get('name')?.dirty)) {
+          <div>
+            @if (updateDataForm.get('name')?.getError('required')) {
+              <p class="text-red-500 text-xs italic">{{ 'UPDATE_DATA.ERRORS.REQUIRED' | translate }}</p>
+            }
+            @else if (updateDataForm.get('name')?.getError('minlength')) {
+              <p class="text-red-500 text-xs italic">{{ 'UPDATE_DATA.ERRORS.NAME_MIN' | translate }}</p>
+            }
+            @else if (updateDataForm.get('name')?.getError('maxlength')) {
+              <p class="text-red-500 text-xs italic">{{ 'UPDATE_DATA.ERRORS.NAME_MAX' | translate }}</p>
+            }
+          </div>
+          }
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="mb-5">
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          {{ 'UPDATE_DATA.EMAIL_LABEL' | translate }}
+        </label>
+        <input
+          type="email"
+          id="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          [placeholder]="'UPDATE_DATA.EMAIL_PLACEHOLDER' | translate"
+          required
+          formControlName="email"
+        />
+        <div class="pt-2">
+          @if (updateDataForm.get('email')?.errors && (updateDataForm.get('email')?.touched || updateDataForm.get('email')?.dirty)) {
+          <div>
+            @if (updateDataForm.get('email')?.getError('required')) {
+              <p class="text-red-500 text-xs italic">{{ 'UPDATE_DATA.ERRORS.REQUIRED' | translate }}</p>
+            }
+            @else if (updateDataForm.get('email')?.getError('email')) {
+              <p class="text-red-500 text-xs italic">{{ 'UPDATE_DATA.ERRORS.INVALID_EMAIL' | translate }}</p>
+            }
+          </div>
+          }
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="mb-5">
+        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+          {{ 'UPDATE_DATA.PHONE_LABEL' | translate }}
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          [placeholder]="'UPDATE_DATA.PHONE_PLACEHOLDER' | translate"
+          required
+          formControlName="phone"
+        />
+        <div class="pt-2">
+          @if (updateDataForm.get('phone')?.errors && (updateDataForm.get('phone')?.touched || updateDataForm.get('phone')?.dirty)) {
+          <div>
+            @if (updateDataForm.get('phone')?.getError('required')) {
+              <p class="text-red-500 text-xs italic">{{ 'UPDATE_DATA.ERRORS.REQUIRED' | translate }}</p>
+            }
+            @else if (updateDataForm.get('phone')?.getError('phone')) {
+              <p class="text-red-500 text-xs italic">{{ 'UPDATE_DATA.ERRORS.INVALID_PHONE' | translate }}</p>
+            }
+          </div>
+          }
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        {{ 'UPDATE_DATA.SUBMIT' | translate }}
+        @if (isLoading) {
+          <span class="pl-2">
+            <i class="fa fa-spin fa-spinner"></i>
+          </span>
+        }
+      </button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,70 @@
+<section class="m-4 p-6 bg-white shadow-md rounded-lg max-w-4xl mx-auto">
+  <h2 class="text-2xl font-semibold mb-6 text-gray-800">
+    {{ "WISHLIST.TITLE" | translate }}
+  </h2>
+
+  @if (wishlistDetails.length === 0) {
+  <div class="flex flex-col justify-center items-center h-80 text-gray-500">
+    <i class="fa-solid fa-heart-circle-xmark fa-5x mb-6"></i>
+    <p class="text-2xl font-semibold mb-2">
+      {{ "WISHLIST.EMPTY" | translate }}
+    </p>
+    <p class="text-sm mb-6">{{ "WISHLIST.START_ADDING" | translate }}</p>
+    <a
+      [routerLink]="['/product']"
+      class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-6 rounded-lg flex items-center gap-2 transition-all duration-300"
+    >
+      <i class="fa-solid fa-heart"></i>
+      {{ "WISHLIST.BROWSE_PRODUCTS" | translate }}
+    </a>
+  </div>
+  } @else {
+  <p class="text-lg font-medium text-gray-600 mb-4">
+    {{ "WISHLIST.COUNT" | translate }}:
+    <span class="text-green-600 font-bold">
+      {{ wishlistDetails.length }}
+    </span>
+  </p>
+
+  @for (wishlist of wishlistDetails; track wishlist.id) {
+  <div class="grid grid-cols-12 gap-4 mb-6 items-center border-b pb-4">
+    <div class="col-span-3 sm:col-span-2">
+      <img
+        [src]="wishlist.imageCover"
+        class="w-full h-24 object-cover rounded-lg shadow-sm"
+        [alt]="wishlist.title"
+      />
+    </div>
+
+    <div class="col-span-9 sm:col-span-7 flex flex-col gap-2">
+      <h3 class="text-lg font-semibold text-gray-800">
+        {{ wishlist.title }}
+      </h3>
+
+      <p class="text-gray-600">
+        {{ "WISHLIST.PRICE" | translate }}:
+        <span class="text-green-500 font-medium">
+          {{ wishlist.price | currency : "GBP" }}
+        </span>
+      </p>
+
+      <button
+        (click)="removeItem(wishlist.id)"
+        class="text-red-500 text-sm flex items-center gap-2 hover:text-red-600"
+      >
+        <i class="fa-solid fa-trash"></i>
+        {{ "WISHLIST.REMOVE" | translate }}
+      </button>
+    </div>
+
+    <div class="col-span-12 sm:col-span-3">
+      <button
+        (click)="addToCart(wishlist.id)"
+        class="btn-main w-full mt-4 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors duration-300"
+      >
+        {{ "WISHLIST.ADD_TO_CART" | translate }}
+      </button>
+    </div>
+  </div>
+  } }
+</section>

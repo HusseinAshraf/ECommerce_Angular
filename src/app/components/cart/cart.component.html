@@ -1,0 +1,111 @@
+<section class="m-4 p-6 bg-white shadow-md rounded-lg max-w-4xl mx-auto">
+  <h2 class="text-2xl font-semibold mb-6 text-gray-800">
+    {{ "cart.shopCart" | translate }}
+  </h2>
+
+  @if (cartDetails && cartDetails.products && cartDetails.products.length === 0)
+  {
+  <div class="flex flex-col justify-center items-center h-80 text-gray-500">
+    <i class="fa-solid fa-cart-shopping fa-5x mb-6"></i>
+    <p class="text-2xl font-semibold mb-2">{{ "cart.empty" | translate }}</p>
+    <p class="text-sm mb-6">{{ "cart.startShopping" | translate }}</p>
+    <a
+      [routerLink]="['/product']"
+      class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg flex items-center gap-2 transition-all duration-300"
+    >
+      <i class="fa-solid fa-cart-plus"></i>
+      {{ "cart.shopNow" | translate }}
+    </a>
+  </div>
+  } @else {
+  <p class="text-lg font-medium text-gray-600 mb-4">
+    {{ "cart.totalPrice" | translate }}
+    <span class="text-green-600 font-bold">
+      {{ cartDetails.totalCartPrice | currency : "GBP" }}
+    </span>
+  </p>
+
+  @for (cartProduct of cartDetails.products; track cartProduct.product.id) {
+  <div class="grid grid-cols-12 gap-4 mb-6 items-center border-b pb-4">
+    <div class="col-span-3 sm:col-span-2">
+      <img
+        [src]="cartProduct.product.imageCover"
+        class="w-full h-24 object-cover rounded-lg shadow-sm"
+        alt="{{ cartProduct.product.title }}"
+      />
+    </div>
+
+    <div class="col-span-9 sm:col-span-7 flex flex-col gap-2">
+      <h3 class="text-lg font-semibold text-gray-800">
+        {{ cartProduct.product.title }}
+      </h3>
+      <p class="text-gray-600">
+        {{ "cart.price" | translate }}:
+        <span class="text-green-500 font-medium">
+          {{ cartProduct.price | currency : "GBP" }}
+        </span>
+      </p>
+      <button
+        (click)="removeItem(cartProduct.product.id)"
+        class="text-red-500 text-sm flex items-center gap-2 hover:text-red-600"
+      >
+        <i class="fa-solid fa-trash"></i>
+        {{ "cart.remove" | translate }}
+      </button>
+    </div>
+
+    <div
+      class="col-span-12 sm:col-span-3 flex justify-between sm:justify-center items-center gap-4"
+    >
+      <button
+        (click)="updateCount(cartProduct.product.id, cartProduct.count + 1)"
+        class="text-gray-500 hover:text-gray-700"
+        title="Increase quantity"
+      >
+        <i class="fa-sharp fa-solid fa-circle-plus fa-xl"></i>
+      </button>
+      <span class="text-lg font-semibold text-gray-800">
+        {{ cartProduct.count }}
+      </span>
+      <button
+        (click)="updateCount(cartProduct.product.id, cartProduct.count - 1)"
+        class="text-gray-500 hover:text-gray-700"
+        title="decrease quantity"
+      >
+        <i class="fa-sharp fa-solid fa-circle-minus fa-xl"></i>
+      </button>
+    </div>
+  </div>
+  }
+
+  <div class="flex justify-between items-center">
+    <button
+      (click)="clearCart()"
+      class="btn-main mt-4 text-white py-2 hover:bg-blue-800 rounded-md transition-colors duration-300"
+      title="Clear Cart"
+    >
+      <i class="fa-solid fa-trash"></i>
+      {{ "cart.removeAll" | translate }}
+    </button>
+
+    <button
+      [routerLink]="['/orders', cartDetails._id]"
+      class="text-white btn-main hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      title="Orders"
+    >
+      <svg
+        class="w-3.5 h-3.5 me-2"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 18 21"
+      >
+        <path
+          d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z"
+        />
+      </svg>
+      {{ "cart.buyNow" | translate }}
+    </button>
+  </div>
+  }
+</section>

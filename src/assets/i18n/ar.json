@@ -1,0 +1,158 @@
+{
+  "navbar": {
+    "Home": "الرئيسية",
+    "Products": "المنتجات",
+    "Categories": "الفئات",
+    "Brands": "العلامات التجارية",
+    "AllOrders": "جميع الطلبات",
+    "Profile": "الملف الشخصي",
+    "SignOut": "تسجيل الخروج",
+    "Login": " تسجيل الدخول",
+    "Register": "تسجيل",
+    "lang": "اللغة"
+  },
+  "footer": {
+    "paragraph": "سنرسل لك رابطًا، افتحه على هاتفك لتحميل التطبيق.",
+    "paymentPartners": "شركاء الدفع",
+    "getDeliveries": "استلم طلباتك مع فريش كارت",
+    "copyRight": "جميع الحقوق محفوظة.",
+    "author": "حسين أشرف",
+    "social": {
+      "facebook": "صفحة فيسبوك",
+      "linkedin": "لينكد إن",
+      "twitter": "صفحة تويتر",
+      "github": "حساب جيت هب"
+    },
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "shareAppLink": "مشاركة رابط التطبيق"
+  },
+  "orders": {
+    "totalOrders": "إجمالي الطلبات",
+    "orderId": "رقم الطلب",
+    "createdAt": "تاريخ الإنشاء",
+    "totalPrice": "السعر الإجمالي",
+    "isPaid": "تم الدفع",
+    "isDelivered": "تم التوصيل",
+    "paymentMethod": "طريقة الدفع",
+    "clickToViewDetails": "اضغط لعرض تفاصيل المنتج",
+    "viewDetails": "عرض التفاصيل",
+    "orderDetails": "تفاصيل الطلب",
+    "customerInfo": "معلومات العميل",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "address": "العنوان",
+    "city": "المدينة",
+    "phone": "رقم الهاتف",
+    "count": "الكمية",
+    "price": "السعر",
+    "yes": "نعم",
+    "no": "لا",
+    "in": "في"
+  },
+  "TitleCategory": "الأقسام الشائعة",
+  "cart": {
+    "shopCart": "سلة التسوق",
+    "totalPrice": "إجمالي سعر السلة:",
+    "price": "السعر:",
+    "remove": "إزالة",
+    "clearCart": "مسح السلة",
+    "removeAll": "مسح الكل",
+    "buyNow": "شراء الآن",
+    "empty": "العربة فارغة",
+    "startShopping": "لا توجد منتجات بالعربة حالياً.",
+    "shopNow": "ابدأ التسوق الآن"
+  },
+  "WISHLIST": {
+    "TITLE": "المفضلة",
+    "COUNT": "العدد",
+    "PRICE": "السعر",
+    "REMOVE": "حذف",
+    "ADD_TO_CART": "أضف إلى السلة",
+    "EMPTY": "قائمة الأمنيات فارغة",
+    "START_ADDING": "ابدأ بإضافة المنتجات التي تحبها!",
+    "BROWSE_PRODUCTS": "تصفح المنتجات"
+  },
+  "loading": "جاري التحميل............",
+  "USER_INFO": {
+    "TITLE": "معلوماتك",
+    "NAME": "الاسم",
+    "ROLE": "الدور",
+    "EMAIL": "البريد الإلكتروني",
+    "PHONE": "رقم الهاتف",
+    "UPDATE_DATA": "تحديث بياناتك",
+    "UPDATE_PASSWORD": "تحديث كلمة المرور"
+  },
+  "UPDATE_DATA": {
+    "TITLE": "تحديث البيانات",
+    "NAME_LABEL": "اسمك",
+    "NAME_PLACEHOLDER": "اسمك",
+    "EMAIL_LABEL": "بريدك الإلكتروني",
+    "EMAIL_PLACEHOLDER": "name@example.com",
+    "PHONE_LABEL": "رقم هاتفك",
+    "PHONE_PLACEHOLDER": "1234567890",
+    "SUBMIT": "تحديث البيانات",
+    "ERRORS": {
+      "REQUIRED": "يرجى تعبئة هذا الحقل.",
+      "NAME_MIN": "يجب أن يحتوي الاسم على 3 أحرف على الأقل.",
+      "NAME_MAX": "يجب ألا يتجاوز الاسم 20 حرفًا.",
+      "INVALID_EMAIL": "البريد الإلكتروني غير صالح.",
+      "INVALID_PHONE": "رقم الهاتف غير صالح."
+    }
+  },
+  "UPDATE_PASSWORD": {
+    "TITLE": "تحديث كلمة المرور",
+    "CURRENT_PASSWORD_LABEL": "كلمة المرور الحالية",
+    "CURRENT_PASSWORD_PLACEHOLDER": "كلمة المرور الحالية",
+    "NEW_PASSWORD_LABEL": "كلمة المرور الجديدة",
+    "NEW_PASSWORD_PLACEHOLDER": "كلمة المرور الجديدة",
+    "CONFIRM_PASSWORD_LABEL": "تأكيد كلمة المرور",
+    "CONFIRM_PASSWORD_PLACEHOLDER": "تأكيد كلمة المرور",
+    "SUBMIT": "تحديث كلمة المرور",
+    "ERRORS": {
+      "REQUIRED": "يرجى تعبئة هذا الحقل.",
+      "INVALID_PASSWORD": "كلمة المرور غير صحيحة.",
+      "PASSWORDS_NOT_MATCH": "كلمتا المرور غير متطابقتين."
+    }
+  },
+  "LOGIN": {
+    "TITLE": "تسجيل الدخول",
+    "EMAIL_LABEL": "البريد الإلكتروني",
+    "PASSWORD_LABEL": "كلمة المرور",
+    "SIGN_IN": "تسجيل الدخول",
+    "FORGET_PASSWORD": "نسيت كلمة المرور؟",
+    "SUCCESS_MESSAGE": "تم تسجيل الدخول بنجاح.",
+    "ERRORS": {
+      "REQUIRED": "يرجى تعبئة هذا الحقل.",
+      "INVALID_EMAIL": "البريد الإلكتروني غير صحيح.",
+      "INVALID_PASSWORD": "كلمة المرور غير صحيحة."
+    }
+  },
+  "REGISTER_NOW": "سجل الآن",
+  "NAME": "الاسم",
+  "REQUIRED_FIELD": "يرجى تعبئة هذا الحقل.",
+  "NAME_MIN_LENGTH": "يجب أن يكون الاسم أكثر من أو يساوي 3 أحرف.",
+  "NAME_MAX_LENGTH": "يجب أن يكون الاسم أقل من أو يساوي 20 حرفًا.",
+  "EMAIL_ADDRESS": "عنوان البريد الإلكتروني",
+  "INVALID_EMAIL": "عنوان بريد إلكتروني غير صالح.",
+  "PHONE_NUMBER": "رقم الهاتف (123-456-7890)",
+  "INVALID_PHONE": "رقم هاتف غير صالح.",
+  "PASSWORD": "كلمة المرور",
+  "INVALID_PASSWORD": "كلمة مرور غير صالحة.",
+  "CONFIRM_PASSWORD": "تأكيد كلمة المرور",
+  "PASSWORDS_MISMATCH": "كلمات المرور غير متطابقة.",
+  "REGISTER": "سجل",
+  "FORGET_PASSWORD": "نسيت كلمة المرور",
+  "YOUR_EMAIL": "البريد الإلكتروني الخاص بك",
+
+  "RESET_CODE_SENT": "تم إرسال رمز إعادة التعيين إلى بريدك الإلكتروني",
+  "ENTER_CODE": "أدخل الرمز",
+  "INVALID_CODE": "رمز غير صالح.",
+  "VERIFY_CODE": "التحقق من الرمز",
+  "RESET_PASSWORD": "إعادة تعيين كلمة المرور",
+  "NEW_PASSWORD": "كلمة المرور الجديدة",
+
+  "PLEASE_FILL_OUT_FIELD": "يرجى تعبئة هذا الحقل.",
+  "SUCCESS_RESET_PASSWORD": "تم تغيير كلمة المرور بنجاح",
+  "RETRY": "حاول مرة أخرى",
+  "SUBMIT": "إرسال"
+}

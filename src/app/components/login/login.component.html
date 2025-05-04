@@ -1,0 +1,97 @@
+<section class="md:max-w-3xl max-w-md mx-auto p-5 my-5 border space-y-5 bg-white dark:bg-gray-800 rounded-lg shadow-lg dark:shadow-none">
+  <h2 class="text-2xl font-semibold text-gray-800 dark:text-white text-center">
+    {{ 'LOGIN.TITLE' | translate }}
+  </h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+    <!-- Email -->
+    <div class="relative z-0 w-full mb-5 group">
+      <input
+        type="email"
+        name="floating_email"
+        id="floating_email"
+        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+        placeholder=" "
+        required
+        formControlName="email"
+      />
+      <label
+        for="floating_email"
+        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >
+        {{ 'LOGIN.EMAIL_LABEL' | translate }}
+      </label>
+      <div>
+        @if (loginForm.get('email')?.errors && (loginForm.get('email')?.touched || loginForm.get('email')?.dirty)) {
+        <div>
+          @if (loginForm.get('email')?.getError('required')) {
+            <p class="text-red-500 text-xs italic">{{ 'LOGIN.ERRORS.REQUIRED' | translate }}</p>
+          }
+          @else if (loginForm.get('email')?.getError('email')) {
+            <p class="text-red-500 text-xs italic">{{ 'LOGIN.ERRORS.INVALID_EMAIL' | translate }}</p>
+          }
+        </div>
+        }
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="relative z-0 w-full mb-5 group">
+      <input
+        type="password"
+        name="floating_password"
+        id="floating_password"
+        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+        placeholder=" "
+        required
+        formControlName="password"
+      />
+      <label
+        for="floating_password"
+        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >
+        {{ 'LOGIN.PASSWORD_LABEL' | translate }}
+      </label>
+      <div>
+        @if (loginForm.get('password')?.errors && (loginForm.get('password')?.touched || loginForm.get('password')?.dirty)) {
+        <div>
+          @if (loginForm.get('password')?.getError('required')) {
+            <p class="text-red-500 text-xs italic">{{ 'LOGIN.ERRORS.REQUIRED' | translate }}</p>
+          }
+          @else if (loginForm.get('password')?.getError('pattern')) {
+            <p class="text-red-500 text-xs italic">{{ 'LOGIN.ERRORS.INVALID_PASSWORD' | translate }}</p>
+          }
+        </div>
+        }
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    >
+      {{ 'LOGIN.SIGN_IN' | translate }}
+      @if (isLoading) {
+        <span class="pl-2">
+          <i class="fa fa-spin fa-spinner"></i>
+        </span>
+      }
+    </button>
+
+    <!-- Forget Password Link -->
+    <a routerLink="/forgetPassword" class="text-sm text-blue-600 dark:text-blue-400">
+      {{ 'LOGIN.FORGET_PASSWORD' | translate }}
+    </a>
+
+    <!-- Success & Error Messages -->
+    <!--
+    @if (msgSuccess) {
+      <p class="text-green-500 text-xs italic pt-4">{{ 'LOGIN.SUCCESS_MESSAGE' | translate }}</p>
+    }
+    @if (msgError) {
+      <p class="text-red-500 text-xs italic pt-4">{{ msgError }}</p>
+    }
+    -->
+  </form>
+</section>

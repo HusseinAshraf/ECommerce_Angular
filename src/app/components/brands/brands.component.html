@@ -1,0 +1,28 @@
+<section class="m-6 py-10">
+  <!-- <h1 class="text-center text-xl font-semibold m-6">Brands</h1> -->
+
+  
+  <div
+    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+  >
+    @for (brands of brandsList; track $index) {
+    <div
+      class="border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+    >
+      <img
+        class="w-full h-48 object-contain rounded-t-lg"
+        [src]="brands.image"
+        alt="Brand image"
+      />
+
+      <div class="px-5 pb-5">
+        <h5
+          class="text-lg font-semibold text-center text-gray-900 dark:text-white"
+        >
+          {{ brands.name }}
+        </h5>
+      </div>
+    </div>
+    }
+  </div>
+</section>

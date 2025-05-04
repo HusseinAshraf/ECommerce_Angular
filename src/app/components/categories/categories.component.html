@@ -1,0 +1,23 @@
+<section class="p-6">
+  <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+    @for (cat of categoriesList; track $index) {
+    <div
+      class="relative overflow-hidden rounded-lg transition-shadow duration-300"
+    >
+      <div class="relative group">
+        <img
+          class="object-cover h-auto max-w-full rounded-lg transform group-hover:scale-105 transition-transform duration-300"
+          [src]="cat.image"
+          alt="{{ cat.name }}"
+        />
+
+        <div
+          class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        >
+          {{ cat.name }}
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</section>
